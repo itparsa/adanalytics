@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import io.branch.referral.Branch;
@@ -16,10 +15,6 @@ import io.branch.referral.BranchError;
 
 import static ir.adonet.analytics.Constants.ADO_NET;
 import static ir.adonet.analytics.Constants.JSON_PARAM;
-
-/**
- * Created by itparsa on 2/6/18.
- */
 
 public class ADAnalytics {
 

@@ -19,7 +19,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-import java.util.Scanner;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -28,9 +27,6 @@ import static ir.adonet.analytics.Constants.END_POINT;
 import static ir.adonet.analytics.Constants.IS_COUNT_SUBMITTED;
 import static ir.adonet.analytics.Constants.JSON_PARAM;
 
-/**
- * Created by itparsa on 2/6/18.
- */
 
 public class CounterService extends IntentService {
 
@@ -67,7 +63,7 @@ public class CounterService extends IntentService {
     }
 
     private void startRequest(String json, String url) {
-        HttpURLConnection connection = null;
+        HttpURLConnection connection;
         InputStream responseStream = null;
         String response = null;
 
@@ -90,7 +86,7 @@ public class CounterService extends IntentService {
     }
 
     private HttpURLConnection createConnection(String urlString) {
-        URL url = null;
+        URL url;
         HttpURLConnection connection = null;
 
         try {
@@ -115,8 +111,8 @@ public class CounterService extends IntentService {
     }
 
     private InputStream makeRequest(String json, HttpURLConnection connection) {
-        OutputStream os = null;
-        BufferedWriter writer = null;
+        OutputStream os;
+        BufferedWriter writer;
         InputStream responseInputStream = null;
         try {
             os = connection.getOutputStream();
@@ -150,7 +146,7 @@ public class CounterService extends IntentService {
     private String parseResponse(InputStream stream) {
         BufferedReader in = new BufferedReader(new InputStreamReader(stream));
         StringBuffer sb = new StringBuffer("");
-        String line = "";
+        String line;
 
         try {
             if ((line = in.readLine()) != null) {
