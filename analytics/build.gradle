@@ -1,9 +1,12 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.itparsa.adanalytics'
 
 android {
     compileSdkVersion 25
     defaultConfig {
         minSdkVersion 15
+        //noinspection OldTargetApi
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
