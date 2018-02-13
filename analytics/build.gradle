@@ -25,8 +25,8 @@ android {
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    implementation 'io.branch.sdk.android:library:2.15.0'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test:runner:1.0.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile 'io.branch.sdk.android:library:2.15.0'
 }
