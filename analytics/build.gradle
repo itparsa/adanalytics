@@ -8,8 +8,8 @@ android {
         minSdkVersion 15
         //noinspection OldTargetApi
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode 150010001
+        versionName "1.0.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -28,5 +28,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support.test:runner:1.0.1'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
-    compile 'io.branch.sdk.android:library:2.15.0'
+    compile ('io.branch.sdk.android:library:2.15.0', {
+        exclude module: 'answers-shim'
+    })
 }
